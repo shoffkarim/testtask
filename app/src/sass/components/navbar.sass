@@ -1,3 +1,71 @@
 .nav
-  background-color: #1D3557
-  max-width: 275px
+  background-color: $text
+  width: 70px
+  height: 100%
+  position: fixed
+  top: 0
+  left: 0
+  padding: 0px 20px 33px
+  transition: all 0.4s
+  @media (max-width: 700px)
+    position: absolute
+    height: 93px
+  @media (max-width: 600px)
+    height: 75px
+  &-wrapper
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+  .button-wrapper
+    display: flex
+    width: auto
+    height: 92px
+    justify-content: center
+    align-items: center
+    @media (max-width: 600px)
+      height: 75px
+  .btn-burger
+    padding: 0px
+  &-list
+    padding: 0
+    @media (max-width: 700px)
+      display: none
+  &-item
+    &::marker
+      color: transparent
+    &__href
+      display: flex
+      flex-direction: row
+      align-items: flex-start
+      text-decoration: none
+      position: relative
+      margin-bottom: 15px
+    &__name
+      font-weight: 500
+      font-size: 16px
+      color: #fff
+      padding-left: 35px
+      margin-bottom: 0px
+      transition: all 0.1s
+      display: none
+    &__img
+      position: absolute
+      top: 0
+      left: 0
+    &--sub
+      .nav-item__name
+        color: #A8DADC
+.nav.js-nav-open
+  width: 275px
+  transition: all 0.4s
+  @media (max-width: 700px)
+    height: 100%
+    .nav-list
+      display: block
+  @media (max-width: 450px)
+    width: 100%
+  .nav-item__name
+    display: block
+.sub-hidden
+  display: none

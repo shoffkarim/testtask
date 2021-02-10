@@ -1,0 +1,92 @@
+.main
+  .container
+    padding-top: 20px
+    padding-bottom: 50px
+
+.table
+  color: $text
+  font-weight: 400
+  font-size: 14px
+  line-height: 17px
+  &-wrapper
+    margin-top: 20px
+    margin-bottom: 20px
+  th
+    background-color: #A8DADC
+    border: 1px solid $text
+    vertical-align: baseline
+    span
+      color: $text
+      font-weight: 500
+      font-size: 14px
+      line-height: 17px
+      width: 100%
+      display: block
+    .th-arrow
+      padding-right: 5px
+      position: relative
+      cursor: pointer
+      &::after
+        content: ""
+        display: block
+        width: 16px
+        height: 7px
+        background-image: url("/app/build/img/table-arrow.png")
+        position: absolute
+        top: 5px
+        right: 0
+        transform: rotate(0deg)
+        transition: all 0.4s
+      &:hover
+        &::after
+          transform: rotate(180deg)
+          transition: all 0.4s
+      @media (max-width: 1400px)
+        padding-right: 20px
+    .th-zoom
+      padding-right: 5px
+      position: relative
+      cursor: pointer
+      &::after
+        content: ""
+        display: block
+        width: 16px
+        height: 16px
+        background-image: url("/app/build/img/zoom-icon.png")
+        position: absolute
+        top: 0px
+        right: 0
+        transition: all 0.4s
+      @media (max-width: 1400px)
+        padding-right: 20px
+  td
+    background-color: #F1FAEE
+    border: 1px solid $text
+    &.white-cell
+      background-color: #fff
+    .link
+      display: block
+      width: 100%
+      text-align: center
+  &__img
+    max-width: 29px
+    max-height: 29px
+    img
+      width: 100%
+.link
+  font-weight: 700
+  font-size: 16px
+  line-height: 20px
+  text-decoration: none
+  padding: 2px 12px
+  border-radius: 10px
+  transition: all 0.4s
+  &--green
+    background-color: #457B9D
+    color: #fff
+    border: 1px solid #457B9D
+    &:hover
+      background-color: #fff
+      color: #457B9D
+      border: 1px solid #457B9D
+      transition: all 0.4s
